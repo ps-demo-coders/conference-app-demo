@@ -1,0 +1,50 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[AtendeeTickets] (Table)
+       [dbo].[Attendees] (Table)
+       [dbo].[ConferenceDates] (Table)
+       [dbo].[Conferences] (Table)
+       [dbo].[ConferenceSchedules] (Table)
+       [dbo].[ConferenceTimeSlots] (Table)
+       [dbo].[DiscountCodes] (Table)
+       [dbo].[PricingCategories] (Table)
+       [dbo].[Regions] (Table)
+       [dbo].[Sessions] (Table)
+       [dbo].[SessionTags] (Table)
+       [dbo].[SessionTypes] (Table)
+       [dbo].[Speakers] (Table)
+       [dbo].[SpeakerSessions] (Table)
+       [dbo].[Tags] (Table)
+       [dbo].[TicketPrices] (Table)
+       [dbo].[TicketTypes] (Table)
+       [dbo].[WorkshopPresenters] (Table)
+       [dbo].[Workshops] (Table)
+       Default Constraint: unnamed constraint on [dbo].[TicketTypes] (Default Constraint)
+       [dbo].[FK_AttendeeTickets_AttendeeId] (Foreign Key)
+       [dbo].[FK_AttendeeTickets_TicketPriceId] (Foreign Key)
+       [dbo].[FK_AttendeeTickets_DiscountId] (Foreign Key)
+       [dbo].[FK_ConferenceDates_ConferenceID] (Foreign Key)
+       [dbo].[FK_ConferenceSchedules_TimeSlotId] (Foreign Key)
+       [dbo].[FK_ConferenceTimeSlots] (Foreign Key)
+       [dbo].[FK_DiscountCodes_ConferenceId] (Foreign Key)
+       [dbo].[FK_SessionTags_SessionID] (Foreign Key)
+       [dbo].[FK_SessionTags_Tag] (Foreign Key)
+       [dbo].[FK_SpeakerSessions_SpeakerId] (Foreign Key)
+       [dbo].[FK_SpeakerSessions_SessionId] (Foreign Key)
+       [dbo].[FK_TicketPrices_ConferenceId] (Foreign Key)
+       [dbo].[FK_TicketPrices_TicketTypeCode] (Foreign Key)
+       [dbo].[FK_TicketPrices_PricingCategoryCode] (Foreign Key)
+       [dbo].[FK_WorkshopPresenters_WorkshopId] (Foreign Key)
+       [dbo].[FK_WorkshopPresenters_SessionId] (Foreign Key)
+
+** Supporting actions

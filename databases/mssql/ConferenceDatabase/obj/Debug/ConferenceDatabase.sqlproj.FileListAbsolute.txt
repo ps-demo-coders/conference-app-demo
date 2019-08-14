@@ -1,0 +1,6 @@
+C:\dev\ConferenceDatabase\ConferenceDatabase\bin\Debug\ConferenceDatabase.dacpac
+C:\dev\ConferenceDatabase\ConferenceDatabase\obj\Debug\ConferenceDatabase.sqlprojAssemblyReference.cache
+C:\dev\ConferenceDatabase\ConferenceDatabase\obj\Debug\ConferenceDatabase.dll
+C:\dev\ConferenceDatabase\ConferenceDatabase\obj\Debug\ConferenceDatabase.pdb
+C:\dev\ConferenceDatabase\ConferenceDatabase\bin\Debug\ConferenceDatabase.dll
+C:\dev\ConferenceDatabase\ConferenceDatabase\bin\Debug\ConferenceDatabase.pdb
