@@ -4,3 +4,13 @@ C:\dev\ConferenceDatabase\ConferenceDatabase\obj\Debug\ConferenceDatabase.dll
 C:\dev\ConferenceDatabase\ConferenceDatabase\obj\Debug\ConferenceDatabase.pdb
 C:\dev\ConferenceDatabase\ConferenceDatabase\bin\Debug\ConferenceDatabase.dll
 C:\dev\ConferenceDatabase\ConferenceDatabase\bin\Debug\ConferenceDatabase.pdb
+C:\GitHub\conference-app-demo\databases\mssql\ConferenceDatabase\bin\Debug\ConferenceDatabase.dacpac
+C:\GitHub\conference-app-demo\databases\mssql\ConferenceDatabase\bin\Debug\ConferenceDatabase.dll
+C:\GitHub\conference-app-demo\databases\mssql\ConferenceDatabase\bin\Debug\ConferenceDatabase.pdb
+C:\GitHub\conference-app-demo\databases\mssql\ConferenceDatabase\obj\Debug\ConferenceDatabase.sqlprojAssemblyReference.cache
+C:\GitHub\conference-app-demo\databases\mssql\ConferenceDatabase\obj\Debug\ConferenceDatabase.dll
+C:\GitHub\conference-app-demo\databases\mssql\ConferenceDatabase\obj\Debug\ConferenceDatabase.pdb
+C:\GitHub\conference-app-demo\databases\mssql\ConferenceDatabase\obj\Debug\Model.xml
+C:\GitHub\conference-app-demo\databases\mssql\ConferenceDatabase\obj\Debug\refactor.xml
+C:\GitHub\conference-app-demo\databases\mssql\ConferenceDatabase\obj\Debug\postdeploy.sql
+C:\GitHub\conference-app-demo\databases\mssql\ConferenceDatabase\obj\Debug\predeploy.sql

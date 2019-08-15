@@ -60,31 +60,33 @@
     <Folder Include="Data" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\Conferences.sql" />
-    <Build Include="Tables\ConferenceSchedules.sql" />
-    <Build Include="Tables\Regions.sql" />
+    <Build Include="Tables\EventSchedule.sql" />
     <Build Include="Tables\Sessions.sql" />
     <Build Include="Tables\SessionTags.sql" />
     <Build Include="Tables\Speakers.sql" />
     <Build Include="Tables\SpeakerSessions.sql" />
     <Build Include="Tables\Tags.sql" />
-    <Build Include="Tables\SessionTypes.sql" />
-    <None Include="Data\RegionsData.sql" />
-    <Build Include="Tables\ConferenceTimeSlots.sql" />
-    <Build Include="Tables\ConferenceDates.sql" />
+    <Build Include="Tables\TimeSlots.sql" />
     <Build Include="Tables\Workshops.sql" />
     <Build Include="Tables\WorkshopPresenters.sql" />
     <Build Include="Tables\TicketPrices.sql" />
     <Build Include="Tables\TicketTypes.sql" />
     <Build Include="Tables\PricingCategories.sql" />
     <Build Include="Tables\Attendees.sql" />
-    <Build Include="Tables\AtendeeTickets.sql" />
+    <Build Include="Tables\AttendeeTickets.sql" />
     <Build Include="Tables\DIscountCodes.sql" />
-    <None Include="Data\ConferencesData.sql" />
     <None Include="Data\TicketTypesData.sql" />
-    <None Include="Data\PricingCategories.sql" />
+    <None Include="Data\PricingCategoriesData.sql" />
+    <Build Include="Tables\WorkshopRegistrations.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ConferenceDatabase.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\WorkshopsData.sql" />
+    <None Include="Data\TimeSlotsData.sql" />
+    <None Include="Data\TagsData.sql" />
+    <None Include="Data\TicketPricesData.sql" />
+    <None Include="Data\SpeakersData.sql" />
   </ItemGroup>
 </Project>

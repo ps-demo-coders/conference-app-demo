@@ -1,19 +1,24 @@
-﻿MERGE INTO TicketTypes AS Target
+﻿
+
+MERGE INTO TicketTypes AS Target
 USING (VALUES
-    ('P', 'Premium', 'Access to all conference events plus a workshop of your choice', 1),
-    ('S', 'Standard', 'Access to the keynote sessions, all breakout sessions and the exhibit hall', 0),
-    ('B', 'Basic', 'Access to the Keynote sessions and the exhibit hall', 0)
+    ('P', 'Premium', 'Access to all conference events plus attend the workshop of your choice.', 1),
+	('S', 'Premium', 'Access to all conference keynotes, sessions, community open spaces and the exhibition hall', 0),
+	('E', 'Premium', 'Access to keynotes, community open spaces and the exhibition hall', 0)
 )
-AS Source (TicketTypeCode, TicketCategoryName, Description, IncludesWorkshop)
+AS Source (TicketTypeCode, TicketTypeName, Description, IncludesWorkshop )
 ON Target.TicketTypeCode = Source.TicketTypeCode
     WHEN MATCHED THEN
         UPDATE
 		    SET
-			TicketCategoryName = Source.TicketCategoryName,
+			TicketTypeName = Source.TicketTypeName,
 			Description = Source.Description,
 			IncludesWorkshop = Source.IncludesWorkshop
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (TicketTypeCode, TicketCategoryName, Description, IncludesWorkshop)
-        VALUES (TicketTypeCode, TicketCategoryName, Description, IncludesWorkshop);
+        INSERT (TicketTypeCode, TicketTypeName, Description, IncludesWorkshop, PricingCategory, PricingStartDate, PricingEndDate, BasePrice )
+        VALUES (TicketTypeCode, TicketTypeName, Description, IncludesWorkshop, PricingCategory, PricingStartDate, PricingEndDate, BasePrice );
 
-GO
+
+
+
+      

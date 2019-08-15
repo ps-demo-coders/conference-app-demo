@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[AtendeeTickets]
+﻿CREATE TABLE [dbo].[AttendeeTickets]
 (
 	AttendeeTicketId   INT IDENTITY     NOT NULL,
 	AttendeeId          INT              NOT NULL,
