@@ -78,6 +78,7 @@
     <None Include="Data\TicketTypesData.sql" />
     <None Include="Data\PricingCategoriesData.sql" />
     <Build Include="Tables\WorkshopRegistrations.sql" />
+    <Build Include="Data\SessionsData.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ConferenceDatabase.refactorlog" />
