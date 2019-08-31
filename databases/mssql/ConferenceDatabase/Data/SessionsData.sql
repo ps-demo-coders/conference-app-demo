@@ -42,9 +42,9 @@ USING (VALUES
     (34, 'Advanced Techniques in Entity Framework Core'   , 60, ''),
     (35, 'C# Language Features You May Not Know About'    , 60, ''),
     (36, 'Asynchronous Programming in .NET'               , 60, ''),
-    (37, 'Advanced Entity Framework Core'                 , 60, ''),
+    (37, 'Deploying .NET Apps with Azure DevOps'          , 60, ''),
     (38, 'A lap around the .NET Command Line Interface (CLI)', 30, ''),
-    (39, 'Deploying .NET Apps with Azure DevOps'          , 30, ''),
+    (39, 'Dapper Quickstart'                              , 30, ''),
     (40, 'Code Analysis for .NET Projects'                , 30, ''),
     (41, 'Better Logging with Serilog'                    , 30, ''),
 
@@ -106,7 +106,7 @@ SELECT @nextSessionId = (
 DBCC CHECKIDENT (Sessions, RESEED, @nextSessionId)
 
 SET IDENTITY_INSERT Sessions OFF
-
+GO
 
 
 

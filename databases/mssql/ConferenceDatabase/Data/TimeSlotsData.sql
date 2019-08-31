@@ -24,7 +24,7 @@ ON Target.TimeSlotId = Source.TimeSlotId
 			TimeSlotDate = Source.TimeSlotDate,
 			StartTime = Source.StartTime,
 			EndTime = Source.EndTime,
-			IsKeynoteTimeSlot = Source.IsKeynotTimeSlot
+			IsKeynoteTimeSlot = Source.IsKeynoteTimeSlot
     WHEN NOT MATCHED BY TARGET THEN
         INSERT (TimeSlotId, TimeSlotDate, StartTime, EndTime, IsKeynoteTimeSlot)
         VALUES (TimeSlotId, TimeSlotDate, StartTime, EndTime, IsKeynoteTimeSlot);
@@ -32,7 +32,7 @@ ON Target.TimeSlotId = Source.TimeSlotId
 
 DECLARE @nextTimeSlotId INT;
 SELECT @nextTimeSlotId = (
-        SELECT max(TimeSplotId)
+        SELECT max(TimeSlotId)
             FROM TimeSlots
 	) ;
 

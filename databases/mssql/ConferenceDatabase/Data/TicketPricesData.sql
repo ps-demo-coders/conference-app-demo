@@ -1,46 +1,53 @@
-﻿SET IDENTITY_INSERT Workshops ON
+﻿SET IDENTITY_INSERT TicketPrices ON
 
-MERGE INTO Workshops AS Target
+MERGE INTO TicketPrices AS Target
 USING (VALUES
-	(1, 'More Effective Agile Practices', '', '', 'Cedar', 50),
-	(2, 'Azure DevOps One Day Bootcamp', '', '', 'Cherry', 50),
-	(3, 'Level Up Your Architecure Skills', '', '', 'Maple', 20),
-	(4, 'Building Microservices with Spring', '', '', 'Aspen', 30),
-	(5, 'SQL Server Performance Tuning', '', '', 'Hickory', 40),
-	(6, 'Serverless Architectures Using AWS', '', '', 'Cottonwood', 30),
-	(7, 'Architecting Large Scale React Applications', '', '', 'Sycamore', 30),
-	(8, 'Machine Learning Quick Start', '', '', 'Chestnut', 40),
-	(9, 'Data Analytics with Tableau', '', '', 'Poplar', 40),
-	(10, 'Python for Enterprise Developers', '', '', 'Birch', 40),
-	(11, 'Hands on Vue.js', '', '', 'Ash', 40),
-	(12, 'Building APIs in ASP.NET Core', '', '', 'Oak', 30)
+	(1, 'P', 'E', 800),
+	(2, 'P', 'R', 1000),
+	(3, 'P', 'L', 1200),
+
+	(4, 'S', 'E', 500),
+	(5, 'S', 'R', 700),
+	(6, 'S', 'L', 1000),
+
+	(7, 'C', 'E', 100),
+	(8, 'C', 'R', 200),
+	(9, 'C', 'L', 300)
 )
-AS Source (WorkshopId, WorkshopName, Description, Requirements, Room, Capacity)
-ON Target.WorkshopId = Source.WorkshopId
+AS Source (TicketPriceId, TicketTypeCode, PricingCategoryCode, BasePrice)
+ON Target.TicketPriceId = Source.TicketPriceId
     WHEN MATCHED THEN
         UPDATE
 		    SET
-			WorkshopName = Source.WorkshopName,
-			Description = Source.Description,
-			Requirements = Source.Requirements,
-			Room = Source.Room,
-			Capacity = Source.Capacity
+			TicketTypeCode = Source.TicketTypeCode,
+			PricingCategoryCode = Source.PricingCategoryCode,
+			BasePrice = Source.BasePrice
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (WorkshopId, WorkshopName, Description, Requirements, Room, Capacity)
-        VALUES (WorkshopId, WorkshopName, Description, Requirements, Room, Capacity);
+        INSERT (TicketPriceId, TicketTypeCode, PricingCategoryCode, BasePrice)
+        VALUES (TicketPriceId, TicketTypeCode, PricingCategoryCode, BasePrice);
 
 GO
 
 
-DECLARE @nextWorkshopId INT;
-SELECT @nextWorkshopId = (
-        SELECT max(WorkshopId)
-            FROM Workshops
+DECLARE @nextTicketPriceId INT;
+SELECT @nextTicketPriceId = (
+        SELECT max(TicketPriceId)
+            FROM TicketPrices
 	) ;
 
 
-DBCC CHECKIDENT (Workshops, RESEED, @nextWorkshopId)
+DBCC CHECKIDENT (TicketPrices, RESEED, @nextTicketPriceId)
 
-SET IDENTITY_INSERT Workshops OFF
+SET IDENTITY_INSERT TicketPrices OFF
+
+
+            
+
+
+
+
+
+
+
 
 

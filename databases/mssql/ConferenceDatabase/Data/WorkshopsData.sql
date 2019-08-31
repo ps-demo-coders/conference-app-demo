@@ -1,4 +1,4 @@
-﻿SET IDENTITY_INSERT TicketPrices ON
+﻿SET IDENTITY_INSERT Workshops ON
 
 MERGE INTO Workshops AS Target
 USING (VALUES
@@ -42,5 +42,4 @@ SELECT @nextWorkshopId = (
 DBCC CHECKIDENT (Workshops, RESEED, @nextWorkshopId)
 
 SET IDENTITY_INSERT Workshops OFF
-
 

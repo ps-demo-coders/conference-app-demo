@@ -21,7 +21,24 @@ USING (VALUES
     (17, 'Stephan', 'Leijtens'    , 'Application Development Manager', 'Bank Europe'              , 'Test', ''),
     (18, 'Anja'   , 'Koehler'     , 'Software Engineer'      , 'Contoso'                          , 'Test', ''),
     (19, 'Petra'  , 'Holtzmann'   , 'Senior API Engineer'    , 'European Investment Partners'     , 'Test', ''),
-	(20, 'Jens'   , 'Lundberg'    , 'Consultant'             , 'Aqua Sky Consulting'              , 'Test', '') 
+	(20, 'Jens'   , 'Lundberg'    , 'Consultant'             , 'Aqua Sky Consulting'              , 'Test', ''),
+	(21, 'Linda'  , 'Carver'      , 'Senior Developer'       , 'Chicago Technology Research'      , 'Test', ''), 
+	(22, 'Ronald' , 'McMillian'   , 'Software Architect'     , 'National Bank'                    , 'Test', ''), 
+	(23, 'Dustin' , 'Finn'        , 'Software Engineer'      , 'Globalmantics Consulting'         , 'Test', ''), 
+	(24, 'Sharon' , 'Johnson'     , 'Solutions Architect'    , 'National Aerospace Technologies'  , 'Test', ''), 
+	(25, 'Karen'  , 'McClure'     , '.NET Architect'         , 'Adventureworks'                   , 'Test', ''), 
+	(26, 'Matthew', 'Thompson'    , 'Technical Lead'         , 'Fabrikam Industries'              , 'Test', ''), 
+	(27, 'Chris'  , 'Moore'       , 'Solutions Architect'    , 'World Wide Importers'             , 'Test', ''),
+	(28, 'Ken'    , 'Perry'       , 'Software Engineer'      , 'International Industrial Works'   , 'Test', ''),
+	(29, 'Christie', 'Fournier'   , 'Application Architect'  , 'National Software Services'       , 'Test', ''), 
+	(30, 'Jenny'  , 'Lee'         , 'Azure Cloud Architect'  , 'Prairie Cloud Solutions'          , 'Test', ''), 
+	(31, 'Alicia' , 'Peng'        , 'Senior Cloud Consultant', 'Cloud Management Partners'        , 'Test', ''), 
+	(32, 'Page'   , 'Reid'        , 'Lead Azure Engineer'    , 'State Investments'                , 'Test', ''), 
+
+	(33, 'Anke' , 'Holzman'       , 'Senior AWS Consultant', 'Cloud Management Partners'          , 'Test', ''), 
+	(34, 'Dylan', 'Wilkinson'     , 'Principal AWS Engineer', 'Cloud Native Labs'                 , 'Test', '') 
+
+
 )
 AS Source (SpeakerId, FirstName, LastName, Title, Company, SpeakerBio, SpeakerPhoto)
 ON Target.SpeakerId = Source.SpeakerId

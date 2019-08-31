@@ -60,7 +60,7 @@
     <Folder Include="Data" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\EventSchedule.sql" />
+    <Build Include="Tables\SessionsSchedule.sql" />
     <Build Include="Tables\Sessions.sql" />
     <Build Include="Tables\SessionTags.sql" />
     <Build Include="Tables\Speakers.sql" />
@@ -74,11 +74,11 @@
     <Build Include="Tables\PricingCategories.sql" />
     <Build Include="Tables\Attendees.sql" />
     <Build Include="Tables\AttendeeTickets.sql" />
-    <Build Include="Tables\DIscountCodes.sql" />
+    <Build Include="Tables\DiscountCodes.sql" />
     <None Include="Data\TicketTypesData.sql" />
     <None Include="Data\PricingCategoriesData.sql" />
     <Build Include="Tables\WorkshopRegistrations.sql" />
-    <Build Include="Data\SessionsData.sql" />
+    <None Include="Data\SessionsData.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ConferenceDatabase.refactorlog" />

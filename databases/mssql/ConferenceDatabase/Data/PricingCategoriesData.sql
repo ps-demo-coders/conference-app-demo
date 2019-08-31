@@ -13,7 +13,7 @@ ON Target.PricingCategoryCode = Source.PricingCategoryCode
 				PricingStartDate = Source.PricingStartDate,
 				PricingEndDate = Source.PricingEndDate
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (PricingCategoryCode, PricingCategoryName)
-        VALUES (PricingCategoryCode, PricingCategoryName);
+        INSERT (PricingCategoryCode, PricingCategoryName, PricingStartDate, PricingEndDate)
+        VALUES (PricingCategoryCode, PricingCategoryName, PricingStartDate, PricingEndDate);
 
 GO
