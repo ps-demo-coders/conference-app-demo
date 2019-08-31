@@ -1,12 +1,21 @@
 INSERT INTO ticket_types (ticket_type_code, ticket_type_name, description, includes_workshop) VALUES ('P', 'Premium', 'Access to all conference events plus attend the workshop of your choice.', TRUE);
-INSERT INTO ticket_types (ticket_type_code, ticket_type_name, description, includes_workshop) VALUES ('S', 'Premium', 'Access to all conference keynotes, sessions, community open spaces and the exhibition hall', FALSE);
-INSERT INTO ticket_types (ticket_type_code, ticket_type_name, description, includes_workshop) VALUES ('E', 'Premium', 'Access to keynotes, community open spaces and the exhibition hall', FALSE);
+INSERT INTO ticket_types (ticket_type_code, ticket_type_name, description, includes_workshop) VALUES ('S', 'Standard', 'Access to all conference keynotes, sessions, community open spaces and the exhibition hall', FALSE);
+INSERT INTO ticket_types (ticket_type_code, ticket_type_name, description, includes_workshop) VALUES ('C', 'Community', 'Access to keynotes, community open spaces and the exhibition hall', FALSE);
 
 INSERT INTO pricing_categories (pricing_category_code, pricing_category_name, pricing_start_date, pricing_end_date) VALUES ('E', 'Early Bird', '2019-12-01', '2020-01-15');
 INSERT INTO pricing_categories (pricing_category_code, pricing_category_name, pricing_start_date, pricing_end_date) VALUES ('R', 'Regular', '2020-01-16', '2020-03-20');
 INSERT INTO pricing_categories (pricing_category_code, pricing_category_name, pricing_start_date, pricing_end_date) VALUES ('L', 'Last Minute', '2020-03-21', '2020-04-07');
 
--- TODO: ticket_prices
+INSERT INTO ticket_prices (ticket_price_id, ticket_type_code, pricing_category_code, base_price) VALUES (1, 'P', 'E', 800);
+INSERT INTO ticket_prices (ticket_price_id, ticket_type_code, pricing_category_code, base_price) VALUES	(2, 'P', 'R', 1000);
+INSERT INTO ticket_prices (ticket_price_id, ticket_type_code, pricing_category_code, base_price) VALUES	(3, 'P', 'L', 1200);
+INSERT INTO ticket_prices (ticket_price_id, ticket_type_code, pricing_category_code, base_price) VALUES	(4, 'S', 'E', 500);
+INSERT INTO ticket_prices (ticket_price_id, ticket_type_code, pricing_category_code, base_price) VALUES (5, 'S', 'R', 700);
+INSERT INTO ticket_prices (ticket_price_id, ticket_type_code, pricing_category_code, base_price) VALUES (6, 'S', 'L', 1000);
+INSERT INTO ticket_prices (ticket_price_id, ticket_type_code, pricing_category_code, base_price) VALUES (7, 'C', 'E', 100);
+INSERT INTO ticket_prices (ticket_price_id, ticket_type_code, pricing_category_code, base_price) VALUES	(8, 'C', 'R', 200);
+INSERT INTO ticket_prices (ticket_price_id, ticket_type_code, pricing_category_code, base_price) VALUES (9, 'C', 'L', 300);
+
 -- TODO: discount_codes
 
 INSERT INTO time_slots (time_slot_id, time_slot_date, start_time, end_time, is_keynote_time_slot) VALUES (1, '2020-04-09', '9:00', '9:45', TRUE);
@@ -23,6 +32,78 @@ INSERT INTO time_slots (time_slot_id, time_slot_date, start_time, end_time, is_k
 INSERT INTO time_slots (time_slot_id, time_slot_date, start_time, end_time, is_keynote_time_slot) VALUES (12, '2020-04-10', '14:15', '15:00', TRUE);
 
 -- TODO: event_schedule
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (1, 1, 1, 'Grand Ballroom');
+
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES ( 2,  2, 2 , 'Cedar');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES ( 3,  4, 3 , 'Cedar');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES ( 4,  5, 4 , 'Cedar');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES ( 5,  7, 5 , 'Cedar');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES ( 6,  8, 6 , 'Cedar');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES ( 7, 11, 7, 'Cedar');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES ( 8,  3, 8 , 'Cedar');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES ( 9,  6, 9 , 'Cedar');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (10,  9, 10, 'Cedar');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (11, 10, 11, 'Cedar');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (12,  2, 12, 'Cherry');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (13,  4, 13, 'Cherry');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (14,  5, 14, 'Cherry');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (15,  7, 15, 'Cherry');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (16,  8, 16, 'Cherry');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (17, 11, 17, 'Cherry');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (18,  3, 18, 'Cherry');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (19,  6, 19, 'Cherry');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (20,  9, 20, 'Cherry');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (21, 10, 21, 'Cherry');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (22,  2, 22, 'Maple');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (23,  4, 23, 'Maple');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (24,  5, 24, 'Maple');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (25,  7, 25, 'Maple');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (26,  8, 26, 'Maple');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (27, 11, 27, 'Maple');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (28,  3, 28, 'Maple');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (29,  6, 29, 'Maple');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (30,  9, 30, 'Maple');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (31, 10, 31, 'Maple');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (32,  2, 32, 'Aspen');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (33,  4, 33, 'Aspen');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (34,  5, 34, 'Aspen');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (35,  7, 35, 'Aspen');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (36,  8, 36, 'Aspen');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (37, 11, 37, 'Aspen');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (38,  3, 38, 'Aspen');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (39,  6, 39, 'Aspen');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (40,  9, 40, 'Aspen');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (41, 10, 41, 'Aspen');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (42,  2, 42, 'Hickory');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (43,  4, 43, 'Hickory');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (44,  5, 44, 'Hickory');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (45,  7, 45, 'Hickory');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (46,  8, 46, 'Hickory');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (47, 11, 47, 'Hickory');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (48,  3, 48, 'Hickory');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (49,  6, 49, 'Hickory');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (50,  9, 50, 'Hickory');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (51, 10, 51, 'Hickory');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (62,  2, 62, 'Cottonwood');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (63,  4, 63, 'Cottonwood');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (64,  5, 64, 'Cottonwood');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (65,  7, 65, 'Cottonwood');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (66,  8, 66, 'Cottonwood');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (67, 11, 67, 'Cottonwood');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (68,  3, 68, 'Cottonwood');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (69,  6, 69, 'Cottonwood');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (70,  9, 70, 'Cottonwood');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (71, 10, 71, 'Cottonwood');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (82,  2, 82, 'Sycamore');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (83,  4, 83, 'Sycamore');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (84,  5, 84, 'Sycamore');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (85,  7, 85, 'Sycamore');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (86,  8, 86, 'Sycamore');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (87, 11, 87, 'Sycamore');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (88,  3, 88, 'Sycamore');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (89,  6, 89, 'Sycamore');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (90,  9, 90, 'Sycamore');
+INSERT INTO session_schedule (schedule_id, time_slot_id, session_id, room) VALUES (91, 10, 91, 'Sycamore');
 
 INSERT INTO sessions (session_id, session_name, session_length, session_description) VALUES (1, 'Keynote - The Golden Age of Software', 45, '');
 INSERT INTO sessions (session_id, session_name, session_length, session_description) VALUES (2 , 'A Better Way to Access Data with Spring Data', 60, '');

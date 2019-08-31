@@ -60,7 +60,7 @@ CREATE TABLE time_slots
     is_keynote_time_slot boolean default false  NOT NULL
 );
 
-CREATE TABLE event_schedule
+CREATE TABLE session_schedule
 (
     schedule_id  integer PRIMARY KEY,
     time_slot_id integer     NOT NULL REFERENCES time_slots (time_slot_id),
