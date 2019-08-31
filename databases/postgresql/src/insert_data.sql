@@ -212,6 +212,100 @@ INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker
 INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (18, 'Anja'   , 'Koehler'     , 'Software Engineer'      , 'Contoso'                          , 'Test', '');
 INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (19, 'Petra'  , 'Holtzmann'   , 'Senior API Engineer'    , 'European Investment Partners'     , 'Test', '');
 INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (20, 'Jens'   , 'Lundberg'    , 'Consultant'             , 'Aqua Sky Consulting'              , 'Test', '');
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (21, 'Linda'  , 'Carver'      , 'Senior Developer'       , 'Chicago Technology Research'      , 'Test', ''); 
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (22, 'Ronald' , 'McMillian'   , 'Software Architect'     , 'National Bank'                    , 'Test', ''); 
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (23, 'Dustin' , 'Finn'        , 'Software Engineer'      , 'Globalmantics Consulting'         , 'Test', ''); 
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (24, 'Sharon' , 'Johnson'     , 'Solutions Architect'    , 'National Aerospace Technologies'  , 'Test', ''); 
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (25, 'Karen'  , 'McClure'     , '.NET Architect'         , 'Adventureworks'                   , 'Test', ''); 
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (26, 'Matthew', 'Thompson'    , 'Technical Lead'         , 'Fabrikam Industries'              , 'Test', ''); 
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (27, 'Chris'  , 'Moore'       , 'Solutions Architect'    , 'World Wide Importers'             , 'Test', '');
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (28, 'Ken'    , 'Perry'       , 'Software Engineer'      , 'International Industrial Works'   , 'Test', '');
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (29, 'Christie', 'Fournier'   , 'Application Architect'  , 'National Software Services'       , 'Test', ''); 
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (30, 'Jenny'  , 'Lee'         , 'Azure Cloud Architect'  , 'Prairie Cloud Solutions'          , 'Test', ''); 
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (31, 'Alicia' , 'Peng'        , 'Senior Cloud Consultant', 'Cloud Management Partners'        , 'Test', ''); 
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (32, 'Page'   , 'Reid'        , 'Lead Azure Engineer'    , 'State Investments'                , 'Test', ''); 
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (33, 'Anke' , 'Holzman'       , 'Senior AWS Consultant', 'Cloud Management Partners'          , 'Test', ''); 
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (34, 'Dylan', 'Wilkinson'     , 'Principal AWS Engineer', 'Cloud Native Labs'                 , 'Test', '');
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (35, 'Henry', 'Duke'          , 'Engineering Lead'      , 'Wired Brain Coffee'                , 'Test', '');
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (36, 'Cynthia', 'Crandall'    , 'Senior Business Analyst', 'Wired Brain Coffee'               , 'Test', '');
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (37, 'Clara', 'Dawson'        , 'Agile Coach'            , 'Agile Coaches Inc'                 , 'Test', '');
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (38, 'Ann'  , 'Martinez'      , 'Senior AWS Consultant'  , 'Western Consulting Services'       , 'Test', '');
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (39, 'James', 'King'          , 'Staff AWS Engineer'     , 'Northern States Bank'              , 'Test', '');
+INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (40, 'Simon', 'Williams'      , 'Chief Technology Officer', 'NorthernSoft Systems'             , 'Test', '');
+
+
+INSERT INTO speaker_sessions (speaker_sessionId, session_id, speaker_id) VALUES 
+    ( 1,  1, 40),
+    ( 2,  2,  4),
+    ( 3,  3,  5),
+    ( 4,  4,  1),
+    ( 5,  5, 15),
+    ( 6,  6, 20),
+    ( 7,  7, 21 ),
+    ( 8,  8,  1),
+    ( 9,  9,  4),
+    (10, 10, 20),
+    (11, 11,  5),
+    (12, 12,  7),
+    (13, 13, 23),
+    (14, 14, 24),
+    (15, 15, 22),
+    (16, 16, 21),
+    (17, 17, 22),
+    (18, 18, 23),
+    (19, 19,  7),
+    (20, 20, 24),
+    (21, 21, 15),
+    (22, 22,  2),
+    (23, 23,  3),
+    (24, 24, 19),
+    (25, 25, 25),
+    (26, 26, 26),
+    (27, 27, 27),
+    (28, 28, 25),
+    (29, 29,  9),
+    (30, 30, 27),
+    (31, 31, 16),
+    (32, 32,  9),
+    (33, 33, 16),
+    (34, 34, 28),
+    (35, 35, 29),
+    (36, 36, 26),
+    (37, 37, 28),
+    (38, 38, 19),
+    (39, 39,  3),
+    (40, 40,  2),
+    (41, 41, 29),
+    (42, 42, 13),
+    (43, 43, 30),
+    (44, 44, 32),
+    (45, 45, 31),
+    (46, 46,  8),
+    (47, 47, 31),
+    (48, 48, 32),
+    (49, 49, 13),
+    (50, 50,  8),
+    (51, 51, 30),
+    (62, 62, 34),
+    (63, 63, 39),
+    (64, 64, 38),
+    (65, 65, 33),
+    (66, 66, 34),
+    (67, 67, 38),
+    (68, 68, 33),
+    (69, 69, 39),
+    (70, 70, 33),
+    (71, 71, 33),		 
+	(82, 82, 37),
+    (83, 83, 17),
+    (84, 84, 17),
+    (85, 85, 14),
+    (86, 86, 36),
+    (87, 87, 35),
+    (88, 88, 36),
+    (89, 89, 37),
+    (90, 90, 14),
+    (91, 91, 35)
 
 -- TODO: speaker_sessions
 
