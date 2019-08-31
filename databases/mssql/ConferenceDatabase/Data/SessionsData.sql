@@ -5,13 +5,13 @@ USING (VALUES
     (1, 'Keynote - The Golden Age of Software', 45, ''),
 
     (2 , 'A Better Way to Access Data with Spring Data', 60, ''),
-    (3 , 'A Deep Dive Int Sping IoC'                   , 60, ''),
+    (3 , 'A Deep Dive Into Spring IoC'                 , 60, ''),
     (4 , 'Building RESTful APIs with Spring Data Rest' , 60, ''),
     (5 , 'Spring Integration Quick Start'              , 60, ''),
     (6 , 'Building Microservices with Spring'          , 60, ''),
     (7 , 'Spring Cloud Primer'                         , 60, ''),
     (8 , 'Spring Boot in 30 Minutes'                   , 30, ''),
-    (9 , 'Testing Spring Applciations'                 , 30, ''),
+    (9 , 'Testing Spring Applications'                 , 30, ''),
     (10, 'Writing Your First Advice with Spring AOP'   , 30, ''),
     (11, 'IntelliJ IDEA Tips and Tricks'               , 30, ''),
 
@@ -43,7 +43,7 @@ USING (VALUES
     (35, 'C# Language Features You May Not Know About'    , 60, ''),
     (36, 'Asynchronous Programming in .NET'               , 60, ''),
     (37, 'Advanced Entity Framework Core'                 , 60, ''),
-    (38, 'A lap around the dotnet Command Line Interface (CLI)', 30, ''),
+    (38, 'A lap around the .NET Command Line Interface (CLI)', 30, ''),
     (39, 'Deploying .NET Apps with Azure DevOps'          , 30, ''),
     (40, 'Code Analysis for .NET Projects'                , 30, ''),
     (41, 'Better Logging with Serilog'                    , 30, ''),
@@ -66,11 +66,11 @@ USING (VALUES
     (66, 'DevOps on the AWS Platform'                     , 60, ''),
     (67, 'Serverless Computing on AWS'                    , 60, ''),
     (68, 'Amazon DynamoDB Quickstart'                     , 30, ''),
-    (69, 'Undersanding the Amazon Elastic Kubernetes Service', 30, ''),
+    (69, 'Understanding the Amazon Elastic Kubernetes Service', 30, ''),
     (70, 'Creating Your First Data Lake in AWS'           , 30, ''),
     (71, 'Migrating to Amazon Aurora'                     , 30, ''),
 
-	(82, 'How Agile Are YOu Really?'                      , 60, ''),
+	(82, 'How Agile Are You Really?'                      , 60, ''),
     (83, 'Better Retrospectives'                          , 60, ''),
     (84, 'Developer to Leader'                            , 60, ''),
     (85, 'Selling Your Ideas to Leadership: A Guide for Technology Professionals'  , 60, ''),
@@ -78,7 +78,7 @@ USING (VALUES
     (87, 'The Seven Habits of Highly Effective Developers', 60, ''),
     (88, 'Writing Better User Stories'                    , 30, ''),
     (89, 'Techniques for Better Estimates'                , 30, ''),
-    (90, 'Communicating Skills for the Technology Professional', 30, ''),
+    (90, 'Communication Skills for the Technology Professional', 30, ''),
     (91, 'Personal Kanban'                                , 30, '')
 
 
