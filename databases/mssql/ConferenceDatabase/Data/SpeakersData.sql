@@ -36,7 +36,13 @@ USING (VALUES
 	(32, 'Page'   , 'Reid'        , 'Lead Azure Engineer'    , 'State Investments'                , 'Test', ''), 
 
 	(33, 'Anke' , 'Holzman'       , 'Senior AWS Consultant', 'Cloud Management Partners'          , 'Test', ''), 
-	(34, 'Dylan', 'Wilkinson'     , 'Principal AWS Engineer', 'Cloud Native Labs'                 , 'Test', '') 
+	(34, 'Dylan', 'Wilkinson'     , 'Principal AWS Engineer', 'Cloud Native Labs'                 , 'Test', ''),
+	(35, 'Henry', 'Duke'          , 'Engineering Lead'      , 'Wired Brain Coffee'                , 'Test', ''),
+	(36, 'Cynthia', 'Crandall'    , 'Senior Business Analyst', 'Wired Brain Coffee'               , 'Test', ''),
+
+	(37, 'Clara', 'Dawson'        , 'Agile Coach'            , 'Agile Coaches Inc'                 , 'Test', ''),
+	(38, 'Ann'  , 'Martinez'      , 'Senior AWS Consultant'  , 'Western Consulting Services'       , 'Test', ''),
+	(39, 'James', 'King'          , 'Staff AWS Engineer'     , 'Northern States Bank'              , 'Test', ''),
 
 
 )

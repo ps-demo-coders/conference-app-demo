@@ -2,7 +2,7 @@
 
 MERGE INTO SpeakerSessions AS Target
 USING (VALUES
-    ( 1,  1, 'Keynote - The Golden Age of Software', 45, ''),
+    ( 1,  1, 40),
 		 
     ( 2,  2,  4),
     ( 3,  3,  5),
@@ -60,26 +60,26 @@ USING (VALUES
     (51, 51, 30),
 		 
     (62, 62, 34),
-    (63, 63, 'Migrating On-Premises Applications to AWS'      , 60, ''),
-    (64, 64, 'IOT Solutions Using AWS'                        , 60, ''),
+    (63, 63, 39),
+    (64, 64, 38),
     (65, 65, 33),
     (66, 66, 34),
-    (67, 67, 'Serverless Computing on AWS'                    , 60, ''),
+    (67, 67, 38),
     (68, 68, 33),
-    (69, 69, 'Undersanding the Amazon Elastic Kubernetes Service', 30, ''),
+    (69, 69, 39),
     (70, 70, 33),
     (71, 71, 33),
 		 
-	(82, 82, 'How Agile Are You Really?'                      , 60, ''),
+	(82, 82, 37),
     (83, 83, 17),
     (84, 84, 17),
     (85, 85, 14),
-    (86, 86, 'Creating a Culture of Learning'                 , 60, ''),
-    (87, 87, 'The Seven Habits of Highly Effective Developers', 60, ''),
-    (88, 88, 'Writing Better User Stories'                    , 30, ''),
-    (89, 89, 'Techniques for Better Estimates'                , 30, ''),
+    (86, 86, 36),
+    (87, 87, 35),
+    (88, 88, 36),
+    (89, 89, 37),
     (90, 90, 14),
-    (91, 91, 'Personal Kanban'                                , 30, '')
+    (91, 91, 35)
 
 
 )
