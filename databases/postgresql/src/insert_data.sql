@@ -234,7 +234,7 @@ INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker
 INSERT INTO speakers (speaker_id, first_name, last_name, title, company, speaker_bio, speaker_photo) VALUES (40, 'Simon', 'Williams'      , 'Chief Technology Officer', 'NorthernSoft Systems'             , 'Test', '');
 
 
-INSERT INTO speaker_sessions (speaker_sessionId, session_id, speaker_id) VALUES 
+INSERT INTO speaker_sessions (speaker_session_id, session_id, speaker_id) VALUES 
     ( 1,  1, 40),
     ( 2,  2,  4),
     ( 3,  3,  5),
