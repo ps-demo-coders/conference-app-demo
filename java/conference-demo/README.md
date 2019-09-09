@@ -4,6 +4,8 @@ Spring Boot application based on David's data model.
 
 **Work in progress!**
 
+Quickest way to compile and run: `./mvnw spring-boot:run` (macOS, Linux) or `mvnw.cmd spring:boot-run` (Windows).
+
 Currently configured to use H2 in-memory database.
 
 Access the H2 database console when the app is running at: http://localhost:8080/h2-console
