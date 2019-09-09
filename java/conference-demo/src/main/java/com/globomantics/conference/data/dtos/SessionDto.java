@@ -8,7 +8,7 @@ public class SessionDto {
     private String name;
     private String description;
     private int length;
-    private Set<SessionTagDto> tags;
+    private Set<String> tags;
     private Set<SessionSpeakerDto> speakers;
 
     public SessionDto() {
@@ -46,11 +46,11 @@ public class SessionDto {
         this.length = length;
     }
 
-    public Set<SessionTagDto> getTags() {
+    public Set<String> getTags() {
         return tags;
     }
 
-    public void setTags(Set<SessionTagDto> tags) {
+    public void setTags(Set<String> tags) {
         this.tags = tags;
     }
 
