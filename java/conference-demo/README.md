@@ -2,6 +2,8 @@
 
 Spring Boot application based on David's data model.
 
+**Work in progress!**
+
 Currently configured to use H2 in-memory database.
 
 Access the H2 database console when the app is running at: http://localhost:8080/h2-console
