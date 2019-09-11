@@ -9,6 +9,8 @@ CREATE TABLE attendees
     phone_number varchar(20) NULL
 );
 
+CREATE SEQUENCE attendees_seq;
+
 CREATE TABLE ticket_types
 (
     ticket_type_code  varchar(1) PRIMARY KEY,
@@ -33,6 +35,8 @@ CREATE TABLE ticket_prices
     base_price            numeric(8, 2) NOT NULL
 );
 
+CREATE SEQUENCE ticket_prices_seq;
+
 CREATE TABLE discount_codes
 (
     discount_code_id integer PRIMARY KEY,
@@ -41,6 +45,8 @@ CREATE TABLE discount_codes
     discount_type    varchar(1)    NOT NULL,
     discount_amount  numeric(8, 2) NOT NULL
 );
+
+CREATE SEQUENCE discount_codes_seq;
 
 CREATE TABLE attendee_tickets
 (
@@ -51,14 +57,18 @@ CREATE TABLE attendee_tickets
     net_price          numeric(8, 2) NOT NULL
 );
 
+CREATE SEQUENCE attendee_tickets_seq;
+
 CREATE TABLE time_slots
 (
     time_slot_id         integer PRIMARY KEY,
-    time_slot_date       date                   NOT NULL,
+    time_slot_date       date                  NOT NULL,
     start_time           time without time zone NOT NULL,
     end_time             time without time zone NOT NULL,
-    is_keynote_time_slot boolean default false  NOT NULL
+    is_keynote_time_slot boolean default false NOT NULL
 );
+
+CREATE SEQUENCE time_slots_seq;
 
 CREATE TABLE sessions
 (
@@ -68,19 +78,25 @@ CREATE TABLE sessions
     session_length      integer       NOT NULL
 );
 
+CREATE SEQUENCE sessions_seq;
+
 CREATE TABLE session_schedule
 (
     schedule_id  integer PRIMARY KEY,
-    time_slot_id integer     NOT NULL REFERENCES time_slots (time_slot_id),
     session_id   integer     NOT NULL REFERENCES sessions (session_id),
+    time_slot_id integer     NOT NULL REFERENCES time_slots (time_slot_id),
     room         varchar(30) NOT NULL
 );
+
+CREATE SEQUENCE session_schedule_seq;
 
 CREATE TABLE tags
 (
     tag_id      integer PRIMARY KEY,
     description varchar(30) NOT NULL
 );
+
+CREATE SEQUENCE tags_seq;
 
 CREATE TABLE session_tags
 (
@@ -99,6 +115,8 @@ CREATE TABLE speakers
     speaker_photo varchar(80)   NULL
 );
 
+CREATE SEQUENCE speakers_seq;
+
 CREATE TABLE session_speakers
 (
     session_id integer NOT NULL REFERENCES sessions (session_id),
@@ -115,11 +133,23 @@ CREATE TABLE workshops
     capacity      integer       NOT NULL
 );
 
+CREATE SEQUENCE workshops_seq;
+
 CREATE TABLE workshop_speakers
 (
     workshop_id integer NOT NULL REFERENCES workshops (workshop_id),
     speaker_id  integer NOT NULL REFERENCES speakers (speaker_id)
 );
+
+CREATE TABLE workshop_schedule
+(
+    schedule_id  integer PRIMARY KEY,
+    workshop_id  integer     NOT NULL REFERENCES workshops (workshop_id),
+    time_slot_id integer     NOT NULL REFERENCES time_slots (time_slot_id),
+    room         varchar(30) NOT NULL
+);
+
+CREATE SEQUENCE workshop_schedule_seq;
 
 CREATE TABLE workshop_registrations
 (
