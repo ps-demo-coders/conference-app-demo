@@ -1,15 +1,20 @@
 package com.pluralsight.conference.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.sql.Blob;
 import java.util.List;
 
 @Entity(name = "speakers")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) //without this you'll get jackson serialization issues with hibernate lazy loaded properties, No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor
 public class Speaker {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long speaker_id;
 
     private String first_name;
@@ -18,12 +23,16 @@ public class Speaker {
     private String company;
     private String speaker_bio;
 
-//    @Lob
-//    private Blob speaker_photo;
+    @Lob
+    @Type(type="org.hibernate.type.BinaryType") //without specifying the type the hibernate query won't import the bytea data into the byte array, you'll get an exception
+    private byte[] speaker_photo;
 
     @ManyToMany(mappedBy = "speakers")
-    @JsonBackReference
+    @JsonIgnore
     List<Session> sessions;
+
+    public Speaker() {
+    }
 
     public Long getSpeaker_id() {
         return speaker_id;
@@ -81,11 +90,11 @@ public class Speaker {
         this.sessions = sessions;
     }
 
-    //    public Blob getSpeaker_photo() {
-//        return speaker_photo;
-//    }
-//
-//    public void setSpeaker_photo(Blob speaker_photo) {
-//        this.speaker_photo = speaker_photo;
-//    }
+    public byte[] getSpeaker_photo() {
+        return speaker_photo;
+    }
+
+    public void setSpeaker_photo(byte[] speaker_photo) {
+        this.speaker_photo = speaker_photo;
+    }
 }

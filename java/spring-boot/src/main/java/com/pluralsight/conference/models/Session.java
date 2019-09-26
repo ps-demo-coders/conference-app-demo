@@ -1,27 +1,31 @@
 package com.pluralsight.conference.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "sessions")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) //without this you'll get jackson serialization issues with hibernate lazy loaded properties, No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor
 public class Session {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long session_id;
-
     private String session_name;
     private String session_description;
     private Integer session_length;
 
     @ManyToMany
-    @JsonManagedReference
     @JoinTable(
-            name = "speaker_sessions",
+            name = "session_speakers",
             joinColumns = @JoinColumn(name = "session_id"),
             inverseJoinColumns = @JoinColumn(name = "speaker_id"))
     List<Speaker> speakers;
+
+    public Session() {
+    }
 
     public List<Speaker> getSpeakers() {
         return speakers;
